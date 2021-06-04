@@ -33,7 +33,7 @@
             <label [attr.for]="input.key">{{input.label}}</label>
             <textarea class="form-control" [formControlName]="input.key" [id]="input.key"></textarea>
         </div>
-        <!-- <div class="errorMessage" *ngIf="!isvalid">{{question.label}} is required</div> -->
+        <div class="errorMessage" *ngIf="!isvalid">{{input.label}} is required</div>
     </div>
 
 </div>

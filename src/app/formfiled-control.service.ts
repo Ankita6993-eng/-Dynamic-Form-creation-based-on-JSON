@@ -18,6 +18,9 @@ export class FormfiledControlService {
         case "email":
           validator.push(Validators.email);
           break;
+        case "required":
+            validator.push(Validators.required);
+            break;
         default:
           break;
       }
@@ -33,6 +36,7 @@ export class FormfiledControlService {
         key:'name',
         label:'Name',
         required:true,
+        validator:"required",
         order:1
       }),
 
@@ -50,6 +54,7 @@ export class FormfiledControlService {
         key:'country',
         label:'Country',
         required:true,
+        validator:"required",
         options: [
           {key: 'india',  value: 'India'},
           {key: 'usa',  value: 'United States of America'},
@@ -64,6 +69,7 @@ export class FormfiledControlService {
         label:'I accept terms and services',
         type:'checkbox',
         required:true,
+        validator:"required",
         order:4
       }),
 
@@ -73,6 +79,7 @@ export class FormfiledControlService {
         label:'Gender',
         type:'radio',
         required:true,
+        validator:"required",
         options:[
           {key:'female',value:'Female'},
           {key:'male',value:'Male'}
@@ -84,6 +91,7 @@ export class FormfiledControlService {
         key:'message',
         label:'Message',
         type:'textarea',
+        validator:"required",
         required:true,
         order:6
       })
