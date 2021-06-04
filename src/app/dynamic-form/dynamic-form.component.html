@@ -1,0 +1,17 @@
+<p></p>
+<div>
+    <form (ngSubmit)="onsubmit()" [formGroup]="form">
+
+        <div *ngFor="let item of formfileds" class="form-group">
+            <app-dynamic-form-input [input]="item" [form]="form"></app-dynamic-form-input>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+        </div>
+
+    </form>
+    <div *ngIf="payload" class="form-group">
+        <strong>Here's the payload</strong><br>{{payload}}
+    </div>
+</div>
